@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: unset;
+}
+
+body, html {
+    font-family: 'Roboto Slab', 'serif';
+    /* background-color: #6998AB; */
+    background-image: linear-gradient(#6998AB, #B1D0E0);
+    height: 100%;
+    position: relative;
+}
+
+.container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    max-width: 600px;
+    padding: 35px 40px;
+    background-color:#ffff;
+    box-shadow: 0 15px 20px 0 #1A374D;
+    border-radius: 10px;
+}
+
+.header-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #ffff;
+}
+
+.header-container > h1 {
+    text-shadow: 0 10px 10px black;
+}
+
+.header-container > p {
+    font-size: 80%;
+    text-shadow: 0 10px 10px black;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.search-container > input {
+    border: none;
+    width: 100%;
+    height: 30px;
+}
+
+.search-container > input:focus {
+    outline: 0;
+    border-bottom: 2px solid #B1D0E0;
+}
+
+.search-container > button {
+    background-color: #6998AB;
+    height: 30px;
+    color: #ffff;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 5px #1A374D;
+}
+
+.search-container > button:active {
+    position: relative;
+    top: 5px;
+    box-shadow: none;
+}
+
+.item-container {
+    display: flex;
+    margin-top: 30px;
+    justify-content: space-around;
+}
+
+.item-container > .character-image img {
+    width: 90%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #ababab;
+}
+
+.item-container > .character-info h3{
+    align-items: center;
+}
+
+.item-container > .character-info ul li {
+    margin-top: 15px;
+    list-style-type: none;
+}
+
+.message {
+    margin: 25px 0 0 60px;
+    color: rgb(247, 84, 66);
+}
+
+
+@media screen and (max-width: 600px) {
+
+    .container {
+        margin: 40px auto;
+        padding: 20px;
+        width: 340px;
+    }
+
+    .header-container {
+        margin-bottom: 10px ;
+    }
+
+    .item-container {
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .item-container > .character-image img {
+        width:100%;
+    }
+
+    .item-container > .character-info ul li {
+        display: inline-block;
+        margin-right: 10px;
+        font-size: 15px;
+    }
+}
