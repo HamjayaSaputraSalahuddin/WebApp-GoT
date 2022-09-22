@@ -48,6 +48,38 @@ body, html {
     list-style-type: none;
 }
 
+.search-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.search-container > input {
+    border: none;
+    width: 100%;
+    height: 30px;
+}
+
+.search-container > input:focus {
+    outline: 0;
+    border-bottom: 2px solid #B1D0E0;
+}
+
+.search-container > button {
+    background-color: #6998AB;
+    height: 30px;
+    color: #ffff;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 5px #1A374D;
+}
+
+.search-container > button:active {
+    position: relative;
+    top: 5px;
+    box-shadow: none;
+}
+
 .message {
     margin: 25px 0 0 60px;
     color: rgb(247, 84, 66);

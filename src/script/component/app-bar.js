@@ -37,12 +37,6 @@ class AppBarr extends HTMLElement {
             margin-left: 40%;
             text-shadow: 0 10px 10px black;
         }
-
-        @media screen and (max-width: 600px) {
-            app-bar {
-                margin-bottom: 10px ;
-            }
-        }
         </style>
         
         <div class="header-container">

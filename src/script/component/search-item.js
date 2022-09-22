@@ -15,8 +15,10 @@ class SearchItem extends HTMLElement{
             </div>
 
             <div class="character-info" id="character-info">
+                <div class= "fullName">
                 <h3>${this.__char.fullName}</h3>
-
+                </div>
+                
                 <ul>
                     <li><strong>First Name: </strong>${this.__char.firstName}</li>
                     <li><strong>Last Name: </strong>${this.__char.lastName}</li>
