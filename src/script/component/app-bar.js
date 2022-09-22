@@ -1,11 +1,49 @@
 class AppBarr extends HTMLElement {
 
+    constructor() {
+
+        super();
+        this.__shadowRoot = this.attachShadow({mode: 'open'});
+    }
+
     connectedCallback() {
         this.render();
     }
 
     render() {
-        this.innerHTML = ` 
+        this.__shadowRoot.innerHTML = ` 
+
+        <style>
+
+        * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        }
+
+        :host {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: #ffff;
+        }
+        
+        .header-container > h1 {
+            text-shadow: 0 10px 10px black;
+        }
+        
+        .header-container > p {
+            font-size: 80%;
+            margin-left: 40%;
+            text-shadow: 0 10px 10px black;
+        }
+
+        @media screen and (max-width: 600px) {
+            app-bar {
+                margin-bottom: 10px ;
+            }
+        }
+        </style>
         
         <div class="header-container">
             <h1>Search GoT Characters</h1>
